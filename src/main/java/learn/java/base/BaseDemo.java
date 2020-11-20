@@ -8,7 +8,7 @@ public class BaseDemo {
         try {
             function.handle();
         } catch (Exception e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
     }
 
@@ -41,7 +41,7 @@ public class BaseDemo {
     }
 
     protected static String toStr(Object o) {
-        if (o instanceof String || o instanceof Number) {
+        if (o instanceof String) {
             return (String) o;
         } else {
             return JSON.toJSONString(o);
